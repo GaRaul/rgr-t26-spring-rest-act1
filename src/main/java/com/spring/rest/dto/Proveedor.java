@@ -8,8 +8,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
-@Entity(name="proveedores")
+@Entity
+@Table(name="proveedor")
 public class Proveedor {
 
 	@Id
@@ -25,10 +27,9 @@ public class Proveedor {
 	public Proveedor() {
 	}
 
-	public Proveedor(Long codigo, String nombre, List<Suministra> suministra) {
+	public Proveedor(Long codigo, String nombre) {
 		this.codigo = codigo;
 		this.nombre = nombre;
-		this.suministra = suministra;
 	}
 
 	public Long getCodigo() {

@@ -21,21 +21,21 @@ public class SuministraController{
 	@Autowired
 	SuministraServiceImpl suministraServiceImpl;
 	
-	@GetMapping("/suministraciones")
+	@GetMapping("/suministras")
 	public List<Suministra> listarSuministra() {
 
 		return suministraServiceImpl.listarSuministra();
 		
 	}
 
-	@PostMapping("/suministraciones")
+	@PostMapping("/suministras")
 	public Suministra guardarSuministra(Suministra suministra) {
 
 		return suministraServiceImpl.guardarSuministra(suministra);
 		
 	}
 
-	@GetMapping("/suministraciones/{id}")
+	@GetMapping("/suministras/{id}")
 	public Suministra suministraXID(Long id) {
 
 		Suministra suministraXID = new Suministra();
@@ -46,7 +46,7 @@ public class SuministraController{
 		
 	}
 
-	@PutMapping("/suministraciones/{id}")
+	@PutMapping("/suministras/{id}")
 	public Suministra actualizarSuministra(@PathVariable(name="id")Long id, Suministra suministra) {
 
 		Suministra suministra_seleccionado = new Suministra();
@@ -64,7 +64,7 @@ public class SuministraController{
 		
 	}
 
-	@DeleteMapping("/suministraciones/{id}")
+	@DeleteMapping("/suministras/{id}")
 	public void eliminarSuministra(@PathVariable(name="id") Long id) {
 
 		suministraServiceImpl.eliminarSuministra(id);
