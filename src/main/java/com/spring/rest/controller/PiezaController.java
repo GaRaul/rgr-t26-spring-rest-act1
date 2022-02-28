@@ -36,7 +36,7 @@ public class PiezaController{
 	}
 
 	@GetMapping("/piezas/{id}")
-	public Pieza piezaXID(Long codigo) {
+	public Pieza piezaXID(@PathVariable(name="id")Long codigo) {
 
 		Pieza piezaXID = new Pieza();
 		

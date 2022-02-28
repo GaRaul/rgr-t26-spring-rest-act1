@@ -36,7 +36,7 @@ public class SuministraController{
 	}
 
 	@GetMapping("/suministras/{id}")
-	public Suministra suministraXID(Long id) {
+	public Suministra suministraXID(@PathVariable(name="id")Long id) {
 
 		Suministra suministraXID = new Suministra();
 		

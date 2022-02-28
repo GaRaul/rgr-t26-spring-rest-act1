@@ -36,7 +36,7 @@ public class ProveedorController{
 	}
 
 	@GetMapping("/proveedores/{id}")
-	public Proveedor proveedorXID(Long codigo) {
+	public Proveedor proveedorXID(@PathVariable(name="id")Long codigo) {
 
 		Proveedor proveedorXID = new Proveedor();
 		
